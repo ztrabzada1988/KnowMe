@@ -1,5 +1,5 @@
 import express from 'express';
-//import path from 'path';
+import path from 'path';
 //import './config/db';
 //import middlewareConfig from './config/middlewares';
 
@@ -12,7 +12,7 @@ const app = express();
 
 
 app.get('/*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../../client/build', 'index.html'));
+  res.sendFile(path.join(__dirname, '../../frontend/public', 'index.html'));
 });
 
 app.set('port', (process.env.PORT || 3001));
